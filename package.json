@@ -1,0 +1,11 @@
+{
+  "name": "gulp-start-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgenii Kuznetsov <harsel1234@gmail.com>",
+  "license": "MIT"
+}
