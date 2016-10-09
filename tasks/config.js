@@ -1,10 +1,5 @@
 const config = {
-	paths: {
-		styles: {
-			src: "src/stylus/main.styl",
-			dest: "dest/css"
-		}
-	}
+	destPath: 'dest'
 };
 
 export default config;

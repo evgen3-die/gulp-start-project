@@ -1,6 +1,6 @@
 import gulp from 'gulp';
-import styles from './tasks/styles'
+import style from './tasks/style'
 
-const build = gulp.parallel(styles);
+const build = gulp.parallel(style);
 
 export default build;
