@@ -10,16 +10,11 @@ import rupture from 'rupture';
 import importIfExist from 'stylus-import-if-exist';
 import autoprefixer from 'autoprefixer-stylus';
 import notify from 'gulp-notify';
-import cache from 'gulp-cached';
-import progeny from 'gulp-progeny';
-
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 export default function style() {
-	return gulp.src('src/stylus/style.styl')
-		.pipe(cache('style'))
-		.pipe(progeny())
+	return gulp.src('src/stylus/**/*.styl')
 		.pipe(plumber({
 			errorHandler: notify.onError((error) => {
 				return {
