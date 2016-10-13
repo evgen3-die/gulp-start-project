@@ -40,8 +40,8 @@ export default function style() {
 			],
 			'include css': true
 		}))
-		.pipe(gcmq())
-		.pipe(nano())
+		.pipe(gulpIf(!isDevelopment, gcmq()))
+		.pipe(gulpIf(!isDevelopment, nano()))
 		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
 		.pipe(gulp.dest(`${config.destPath}/css`));
 }

@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import style from './tasks/style'
+import style from './tasks/style';
 
 const build = gulp.parallel(style);
 
