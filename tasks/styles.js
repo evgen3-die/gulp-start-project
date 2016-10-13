@@ -12,8 +12,6 @@ import autoprefixer from 'autoprefixer-stylus';
 import notify from 'gulp-notify';
 import jeet from 'jeet';
 
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
-
 export default function styles() {
 	return gulp.src('src/stylus/style.styl')
 		.pipe(plumber({
@@ -24,7 +22,7 @@ export default function styles() {
 				}
 			})
 		}))
-		.pipe(gulpIf(isDevelopment, sourcemaps.init()))
+		.pipe(gulpIf(config.isDevelopment, sourcemaps.init()))
 		.pipe(stylus({
 			use: [
 				importIfExist(),
@@ -37,8 +35,8 @@ export default function styles() {
 			],
 			'include css': true
 		}))
-		.pipe(gulpIf(!isDevelopment, gcmq()))
-		.pipe(gulpIf(!isDevelopment, nano()))
-		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
+		.pipe(gulpIf(!config.isDevelopment, gcmq()))
+		.pipe(gulpIf(!config.isDevelopment, nano()))
+		.pipe(gulpIf(config.isDevelopment, sourcemaps.write()))
 		.pipe(gulp.dest(`${config.destPath}/css`));
 }
