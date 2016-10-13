@@ -1,10 +1,10 @@
 import gulp from 'gulp';
-import style from './tasks/style';
+import styles from './tasks/styles';
 
 const watch = () => {
-	gulp.watch('src/stylus/**/*.styl', style);
+	gulp.watch('src/stylus/**/*.styl', styles);
 };
 
-const build = gulp.series(style, watch);
+const build = gulp.series(styles, watch);
 
 export default build;

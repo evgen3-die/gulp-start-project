@@ -14,7 +14,7 @@ import jeet from 'jeet';
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
-export default function style() {
+export default function styles() {
 	return gulp.src('src/stylus/style.styl')
 		.pipe(plumber({
 			errorHandler: notify.onError((error) => {
