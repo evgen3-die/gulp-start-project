@@ -6,7 +6,6 @@ import sourcemaps from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import gcmq from 'gulp-group-css-media-queries';
 import nano from 'gulp-cssnano';
-import rename from 'gulp-rename';
 import rupture from 'rupture';
 import importIfExist from 'stylus-import-if-exist';
 import autoprefixer from 'autoprefixer-stylus';
@@ -43,7 +42,6 @@ export default function style() {
 		}))
 		.pipe(gcmq())
 		.pipe(nano())
-		.pipe(rename({suffix: '.min'}))
 		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
 		.pipe(gulp.dest(`${config.destPath}/css`));
 }
