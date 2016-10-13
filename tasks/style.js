@@ -10,6 +10,7 @@ import rupture from 'rupture';
 import importIfExist from 'stylus-import-if-exist';
 import autoprefixer from 'autoprefixer-stylus';
 import notify from 'gulp-notify';
+import jeet from 'jeet';
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
@@ -28,7 +29,8 @@ export default function style() {
 			use: [
 				importIfExist(),
 				rupture(),
-				autoprefixer()
+				autoprefixer(),
+				jeet()
 			],
 			paths: [
 				'bower_components'

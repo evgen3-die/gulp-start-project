@@ -23,6 +23,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^2.5.0",
+    "jeet": "^6.1.5",
     "rupture": "^0.6.1",
     "stylus-import-if-exist": "^1.1.0"
   }
