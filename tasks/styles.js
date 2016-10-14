@@ -24,6 +24,9 @@ export default function styles() {
 		}))
 		.pipe(gulpIf(config.isDevelopment, sourcemaps.init()))
 		.pipe(stylus({
+			import: [
+				`${process.cwd()}/tmp/sprite`
+			],
 			use: [
 				importIfExist(),
 				rupture(),
