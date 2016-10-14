@@ -12,4 +12,6 @@ $ npm install gulpjs/gulp-cli -g
 
 нужна поддержка editorconfig для текстового редактора/IDE
 
-Для разработки просто gulp, для продакшн NODE_ENV=production gulp (убирает sourcemaps и тд)
+Для разработки - npm run dev
+
+Для продакшн - npm run prod
