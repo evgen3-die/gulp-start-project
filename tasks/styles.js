@@ -38,5 +38,5 @@ export default function styles() {
 		.pipe(gulpIf(!config.isDevelopment, gcmq()))
 		.pipe(gulpIf(!config.isDevelopment, nano()))
 		.pipe(gulpIf(config.isDevelopment, sourcemaps.write()))
-		.pipe(gulp.dest(`${config.destPath}/css`));
+		.pipe(gulp.dest(`${config.destPath}/assets/css`));
 }

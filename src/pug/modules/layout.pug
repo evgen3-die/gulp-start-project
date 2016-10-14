@@ -1,0 +1,17 @@
+include header
+include footer
+
+doctype html
+html(lang='ru')
+	include head
+
+	body
+		.page
+			.page__header
+				+header
+
+			.page__main
+				block main
+
+			.page__footer
+				+footer
