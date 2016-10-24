@@ -7,9 +7,9 @@ export default function sprite() {
 	const spriteData = gulp.src('src/sprite/*.png').pipe(spritesmith({
 		algorithm: 'binary-tree',
 		padding: 8,
-		imgPath: '../images/sprite.png',
+		imgPath: 'images/sprite.png',
 		imgName: 'sprite.png',
-		retinaImgPath: '../images/sprite@2x.png',
+		retinaImgPath: 'images/sprite@2x.png',
 		retinaImgName: 'sprite@2x.png',
 		retinaSrcFilter: '**/*@2x.png',
 		cssName: 'sprite.styl'
