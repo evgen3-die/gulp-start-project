@@ -37,6 +37,7 @@
     "jeet": "^6.1.5",
     "merge-stream": "^1.0.0",
     "rupture": "^0.6.1",
+    "stylus": "^0.54.5",
     "stylus-import-if-exist": "^1.1.0"
   }
 }
