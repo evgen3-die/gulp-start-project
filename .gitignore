@@ -3,6 +3,7 @@ dest
 tmp
 zip
 .publish
+.gulp
 
 # Design
 psd

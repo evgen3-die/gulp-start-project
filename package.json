@@ -32,6 +32,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^2.5.0",
+    "gulp-tinypng-nokey": "^1.0.4",
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^5.0.0",
     "jeet": "^6.1.5",
