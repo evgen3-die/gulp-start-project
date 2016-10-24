@@ -15,3 +15,5 @@ $ npm install gulpjs/gulp-cli -g
 Для разработки - npm run dev
 
 Для продакшн - npm run prod
+
+https://evgen3.github.io/gulp-start-project/ задеплоеный dest

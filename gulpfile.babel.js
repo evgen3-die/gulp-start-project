@@ -5,6 +5,9 @@ import images from './tasks/images';
 import sprite from './tasks/sprite';
 import clean from './tasks/clean';
 import scripts from './tasks/scripts';
+import deploy from './tasks/deploy';
+
+gulp.task(deploy);
 
 const watch = () => {
 	gulp.watch('src/stylus/**/*.styl', styles);
