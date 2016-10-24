@@ -6,6 +6,8 @@ import sprite from './tasks/sprite';
 import clean from './tasks/clean';
 import scripts from './tasks/scripts';
 import deploy from './tasks/deploy';
+import resources from './tasks/resources';
+import server from './tasks/server';
 
 gulp.task(deploy);
 
@@ -15,6 +17,7 @@ const watch = () => {
 	gulp.watch('src/images/**/*.{jpg,gif,svg,png}', images);
 	gulp.watch('src/sprite/*.png', gulp.series(sprite, styles));
 	gulp.watch('src/js/**/*.js', scripts);
+	gulp.watch('src/resources/**/*', resources);
 };
 
 const build = gulp.series(
@@ -23,9 +26,10 @@ const build = gulp.series(
 		gulp.series(sprite, styles),
 		templates,
 		images,
-		scripts
+		scripts,
+		resources
 	),
-	watch
+	gulp.parallel(watch, server)
 );
 
 export default build;
