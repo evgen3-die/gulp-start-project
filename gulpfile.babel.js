@@ -5,11 +5,9 @@ import images from './tasks/images';
 import sprite from './tasks/sprite';
 import clean from './tasks/clean';
 import scripts from './tasks/scripts';
-import deploy from './tasks/deploy';
+import github from './tasks/github';
 import resources from './tasks/resources';
 import server from './tasks/server';
-
-gulp.task(deploy);
 
 const watch = () => {
 	gulp.watch('src/stylus/**/*.styl', styles);
@@ -28,8 +26,17 @@ const build = gulp.series(
 		images,
 		scripts,
 		resources
-	),
+	)
+);
+
+const dev = gulp.series(
+	build,
 	gulp.parallel(watch, server)
 );
 
-export default build;
+const deploy = gulp.series(
+	build,
+	github
+);
+
+export {build, dev, deploy};

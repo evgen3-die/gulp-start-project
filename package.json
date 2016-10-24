@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
-    "prod": "cross-env NODE_ENV=production gulp"
+    "dev": "gulp dev",
+    "production": "cross-env NODE_ENV=production gulp build",
+    "deploy": "cross-env NODE_ENV=production gulp deploy"
   },
   "author": "Evgenii Kuznetsov <harsel1234@gmail.com>",
   "license": "MIT",

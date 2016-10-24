@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import config from './config';
 import ghPages from 'gulp-gh-pages';
 
-export default function deploy() {
+export default function github() {
 	return gulp.src('**/*', {cwd: config.destPath})
 		.pipe(ghPages());
 }
