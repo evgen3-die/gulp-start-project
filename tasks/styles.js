@@ -13,7 +13,7 @@ import notify from 'gulp-notify';
 import jeet from 'jeet';
 
 export default function styles() {
-	return gulp.src('src/stylus/style.styl')
+	return gulp.src('src/stylus/app.styl')
 		.pipe(plumber({
 			errorHandler: notify.onError((error) => {
 				return {
@@ -41,5 +41,5 @@ export default function styles() {
 		.pipe(gulpIf(!config.isDevelopment, gcmq()))
 		.pipe(gulpIf(!config.isDevelopment, nano()))
 		.pipe(gulpIf(config.isDevelopment, sourcemaps.write()))
-		.pipe(gulp.dest(`${config.destPath}/assets/css`));
+		.pipe(gulp.dest(`${config.destPath}/assets`));
 }
